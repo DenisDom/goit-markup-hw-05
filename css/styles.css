@@ -115,7 +115,7 @@ body {
     color: var(--text-color);
     transition: color var(--css-transition);
     padding-top: 32px;
-    padding-bottom: 28px;
+    padding-bottom: 32px;
 }
 
 .nav-link:hover,
@@ -182,11 +182,13 @@ body {
     background-color: var(--bg-hero);
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/bg.jpg');
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     max-width: 1600px;
     height: 600px;
+    margin: 0 auto;
 }
 
 .section-hero {
@@ -471,24 +473,29 @@ body {
     color: var(--grey-color-webstudio);
     width: 100%;
     height: 100%;
-    transition: color var(--css-transition);
+    transition: border-color var(--css-transition), color var(--css-transition);
 }
 
 .client-link:hover, 
-.client-link-focus {
+.client-link:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
 
 .client-logo {
     fill: currentColor;
-    transition: fill var(--css-transition);
 }
 
 .page-footer {
     background-color: var(--bg-footer);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
 .footer-logo {
@@ -556,7 +563,7 @@ body {
     color: var(--text-color);
     background-color: var(--grey-bg-color);
 
-    transition: color var(--css-transition), background-color var(--css-transition);
+    transition: color var(--css-transition), background-color var(--css-transition), box-shadow var(--css-transition);
 
     border: none;
     padding-top: 6px;
